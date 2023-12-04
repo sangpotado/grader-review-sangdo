@@ -11,18 +11,16 @@ class IsMoon implements StringChecker {
 
 public class TestListExamples {
   @Test(timeout = 500)
-  public void testMergeRightEnd() {
+  public void testMerge1() {
     List<String> left = Arrays.asList("a", "b", "c");
     List<String> right = Arrays.asList("a", "d");
     List<String> merged = ListExamples.merge(left, right);
     List<String> expected = Arrays.asList("a", "a", "b", "c", "d");
     assertEquals(expected, merged);
   }
-}
 
-public class TestListExamples2 {
-  @Test(timeout = 500)
-  public void testMergeRightEnd() {
+    @Test(timeout = 500)
+  public void testMerge2() {
     List<String> left = Arrays.asList("apple", "bee", "cat");
     List<String> right = Arrays.asList("apple2", "ddd");
     List<String> merged = ListExamples.merge(left, right);
@@ -30,3 +28,4 @@ public class TestListExamples2 {
     assertEquals(expected, merged);
   }
 }
+

@@ -19,3 +19,14 @@ public class TestListExamples {
     assertEquals(expected, merged);
   }
 }
+
+public class TestListExamples2 {
+  @Test(timeout = 500)
+  public void testMergeRightEnd() {
+    List<String> left = Arrays.asList("apple", "bee", "cat");
+    List<String> right = Arrays.asList("apple2", "ddd");
+    List<String> merged = ListExamples.merge(left, right);
+    List<String> expected = Arrays.asList("apple", "apple2", "bee", "cat", "ddd");
+    assertEquals(expected, merged);
+  }
+}
